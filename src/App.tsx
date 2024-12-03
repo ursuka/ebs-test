@@ -1,7 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./pages/ErrorPage";
-import CartPage from "./pages/CartPage";
-import HomePage from "./pages/HomePage";
+import Navbar from "./componets/Navbar/Navbar";
+import { FC, lazy, Suspense } from "react";
+import Footer from "./componets/Footer/Footer";
+
+const HomePage = lazy(() => import("./pages/HomePage"));
+const ShoppingCartPage = lazy(() => import("./pages/ShoppingCartPage"));
+const ErrorPage = lazy(() => import("./pages/ErrorPage"));
 
 const router = createBrowserRouter([
   {
@@ -9,8 +13,8 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/cart",
-    element: <CartPage />,
+    path: "/shoppingCart",
+    element: <ShoppingCartPage />,
   },
   {
     path: "*",
@@ -18,8 +22,18 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
-  return <RouterProvider router={router} />;
-}
+const App: FC = () => {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Suspense fallback={<div>Loading...</div>}>
+          <RouterProvider router={router} />
+        </Suspense>
+      </main>
+      <Footer />
+    </>
+  );
+};
 
 export default App;
