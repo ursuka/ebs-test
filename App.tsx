@@ -3,14 +3,14 @@ import {
   BrowserRouter,
   Routes,
 } from "react-router-dom";
-import Navbar from "./componets/navbar/Navbar";
+import Navbar from "./src/componets/navbar/Navbar";
 import { FC, lazy, Suspense } from "react";
-import Footer from "./componets/footer/Footer";
-import Loading from "./componets/loading/Loading";
+import Footer from "./src/componets/footer/Footer";
+import Loading from "./src/componets/loading/Loading";
 
-const HomePage = lazy(() => import("./pages/HomePage"));
-const ShoppingCartPage = lazy(() => import("./pages/ShoppingCartPage"));
-const ErrorPage = lazy(() => import("./pages/ErrorPage"));
+const HomePage = lazy(() => import("./src/pages/HomePage"));
+const ShoppingCartPage = lazy(() => import("./src/pages/ShoppingCartPage"));
+const ErrorPage = lazy(() => import("./src/pages/ErrorPage"));
 
 
 const App: FC = () => {

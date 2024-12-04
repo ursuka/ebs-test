@@ -19,9 +19,10 @@ const ShoppingCartPage: FC = () => {
               <li key={item.id} className={`py-3 sm:py-4 pb-3 sm:pb-4`}>
                 <div className="flex items-center space-x-4 rtl:space-x-reverse justify-center">
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                      {item.title}
-                    </p>
+                    <span className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                      {item.title} 
+                    </span>
+                    <span className="text-sm font-medium text-gray-900 truncate dark:text-gray-500"> | {item.category}</span>
                   </div>
                   <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                     ${item.price} x {item.quantity}

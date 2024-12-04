@@ -7,11 +7,12 @@ const ProductCard: FC<ProductCardProps> = ({
   price,
   title,
   addToCart
-}) => {  
+}) => {
+  
   return (
     <div className="w-full flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <img
-        className="p-8 rounded-t-lg w-[300px] h-[350px]"
+        className="p-8 rounded-t-lg w-[300px] h-[350px] self-center"
         src={image}
         alt="product image"
       />

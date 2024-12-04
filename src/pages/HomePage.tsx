@@ -144,6 +144,7 @@ const HomePage: FC = () => {
                   id: product.id,
                   title: product.title,
                   price: product.price,
+                  category: product.category,
                   quantity: 1,
                 })
               }
