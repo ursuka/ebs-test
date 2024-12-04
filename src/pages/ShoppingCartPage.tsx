@@ -7,11 +7,11 @@ const ShoppingCartPage: FC = () => {
   const { cart, removeFromCart, clearCart, getTotalPrice, decreaseQuantity, increaseQuantity } =
     useCart();
 
-  return (
+  return (  
     <Container>
-      <h1 className="text-2xl" >Your Shopping Cart:</h1>
+      <h1 className="text-2xl text-black dark:text-white" >Your Shopping Cart:</h1>
       {cart.length === 0 ? (
-        <h1 className="text-2xl" >Your cart is empty.</h1>
+        <h1 className="text-2xl text-black dark:text-white" >Your cart is empty.</h1>
       ) : (
         <div className="w-full">
           <ul className="w-full flex flex-col justify-center divide-y divide-gray-200 dark:divide-gray-700">

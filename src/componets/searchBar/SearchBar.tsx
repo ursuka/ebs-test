@@ -8,7 +8,7 @@ const SearchInput: FC<SearchBarProps> = ({type, placeholder = 'Search...', value
     value={value}
     onChange={onChange}
     placeholder={placeholder}
-    className="p-2 border pr-1 border-gray-300 rounded-lg w-full outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition duration-300"
+    className="p-2 border pr-1 text-black dark:text-white border-gray-300 rounded-lg w-full outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition duration-300"
   />
   );
 };
